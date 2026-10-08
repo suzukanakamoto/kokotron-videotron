@@ -1,0 +1,223 @@
+/* =========================================================
+   bom-reference-data.js — Katalog Referensi Hardware Videotron
+   Diekstrak dari Draft_Format_Penawaran_LED (BOQ Engineering
+   Template internal). Dipakai oleh:
+   - products.html  -> Database Modul LED (referensi spesifikasi)
+   - product-detail.js -> BOM & Price Estimator pada Simulator Cabinet
+
+   CATATAN SUMBER DATA:
+   - File asal bernama "...No_Price.xlsx" — TIDAK memuat harga satuan
+     sama sekali. Field harga pada estimator diisi manual oleh sales
+     (lihat PRICE_DEFAULTS) dan BUKAN angka resmi dari supplier.
+   - PIXELS_PER_PORT (650.000 px) adalah konstanta industri kapasitas
+     maksimum 1 port sending card mode sinkron, dipakai sheet asli
+     pada formula 'Receiving Card Port Number'.
+   ========================================================= */
+
+window.BOM_REFERENCE = {
+  PIXELS_PER_PORT: 650000,
+  SPARE_RATE: 0.05, // cadangan 5% dibulatkan ke atas, persis formula sheet asli
+
+  modules: [
+    { id: "mod-1", brand: "DAHUA", name: "DAHUA P1.25 RGB Indoor 1/64S 32x16cm 256x128 6000Hz GOB HUB320", pitch: "P1.25", widthPx: 256, heightPx: 128, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-2", brand: "DAHUA", name: "DAHUA P1.53 RGB Indoor 1/52S 32x16cm 208x104 6000Hz", pitch: "P1.53", widthPx: 208, heightPx: 104, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-3", brand: "DAHUA", name: "DAHUA P1.839 RGB Indoor 1/58S 32x16cm 174x87 6000Hz HUB320", pitch: "P1.839", widthPx: 174, heightPx: 87, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-4", brand: "DAHUA", name: "DAHUA P1.86 RGB Indoor 1/43S 32x16cm 172x86 6000Hz", pitch: "P1.86", widthPx: 172, heightPx: 86, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-5", brand: "DAHUA", name: "DAHUA P2.0 RGB Indoor 1/40S 32x16cm 160x80 6000Hz", pitch: "P2", widthPx: 160, heightPx: 80, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-6", brand: "DAHUA", name: "DAHUA P2.5 RGB Indoor 1/32S 32x16cm 128x64 6000Hz", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-7", brand: "DAHUA", name: "DAHUA P2.5 RGB Indoor 1/32S 32x16cm 128x64 3840Hz Copper", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-8", brand: "DAHUA", name: "DAHUA P3.076 RGB Indoor 1/26S 32x16cm 104x52 6000Hz", pitch: "P3.076", widthPx: 104, heightPx: 52, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-9", brand: "DAHUA", name: "DAHUA P4 RGB Indoor 1/20S 32x16cm 80x40 6000Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 6000, environment: "Indoor" },
+    { id: "mod-10", brand: "DAHUA", name: "DAHUA P2.5 RGB Outdoor 1/16S 32x16cm 128x64 7680Hz", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-11", brand: "DAHUA", name: "DAHUA P3.076 RGB Outdoor 1/13S 32x16cm 104x52 7680Hz", pitch: "P3.076", widthPx: 104, heightPx: 52, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-12", brand: "DAHUA", name: "DAHUA P4 RGB Outdoor 1/10S 32x16cm 80x40 7680Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-13", brand: "DAHUA", name: "DAHUA P5 RGB Outdoor 1/8S 32x16cm 64x32 7680Hz", pitch: "P5", widthPx: 64, heightPx: 32, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-14", brand: "DAHUA", name: "DAHUA P6.67 RGB Outdoor 1/6S 32X16cm 48x24 7680Hz", pitch: "P6.67", widthPx: 48, heightPx: 24, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-15", brand: "DAHUA", name: "DAHUA P8 RGB Outdoor 1/5S 32x16cm 40x20 7680Hz", pitch: "P8", widthPx: 40, heightPx: 20, refreshHz: 7680, environment: "Outdoor" },
+    { id: "mod-16", brand: "JIACAI", name: "JIACAI P10 RGB Outdoor 1/2S 32X16cm 32X16 3840Hz SMD3535", pitch: "P10", widthPx: 32, heightPx: 16, refreshHz: 3840, environment: "Outdoor" },
+    { id: "mod-17", brand: "DAHUA", name: "DAHUA Flexible P1.53 RGB Indoor 1/52S 32x16cm 208x104 3840Hz", pitch: "P1.53", widthPx: 208, heightPx: 104, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-18", brand: "DAHUA", name: "DAHUA Flexible P1.86 RGB Indoor 1/43S 32x16cm 172x86 3840Hz", pitch: "P1.86", widthPx: 172, heightPx: 86, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-19", brand: "DAHUA", name: "DAHUA Flexible P2.5 RGB Indoor 1/32S 32x16cm 128x64 3840Hz", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-20", brand: "DAHUA", name: "DAHUA Flexible P4 RGB Indoor 1/20S 32x16cm 80x40 3840Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-21", brand: "DAHUA", name: "DAHUA Flexible P4 RGB Outdoor 1/10S 32x16cm 80x40 3840Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 3840, environment: "Outdoor" },
+    { id: "mod-22", brand: "LAMPRO", name: "LAMPRO P1.839 RGB Indoor 1/58S 32x16cm 174x87 3840Hz HUB320", pitch: "P1.839", widthPx: 174, heightPx: 87, refreshHz: 3840, environment: "Indoor" },
+    { id: "mod-23", brand: "LAMPRO", name: "LAMPRO P1.86 RGB Indoor 1/43S 32x16cm 172x86 7680Hz", pitch: "P1.86", widthPx: 172, heightPx: 86, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-24", brand: "LAMPRO", name: "LAMPRO P2.5 RGB Indoor 1/32S 32x16cm 128x64 7680Hz", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-25", brand: "LAMPRO", name: "LAMPRO P4 RGB Indoor 1/20S 32x16cm 80x40 7680Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-26", brand: "LAMPRO", name: "LAMPRO P4 RGB Outdoor 1/10S 32x16cm 80x40 3840Hz", pitch: "P4", widthPx: 80, heightPx: 40, refreshHz: 3840, environment: "Outdoor" },
+    { id: "mod-27", brand: "LAMPRO", name: "LAMPRO P5 RGB Outdoor 1/8S 32x16cm 64x32 3840Hz", pitch: "P5", widthPx: 64, heightPx: 32, refreshHz: 3840, environment: "Outdoor" },
+    { id: "mod-28", brand: "LAMPRO", name: "LAMPRO P8 RGB Outdoor 1/5S 32x16cm 40x20 3840Hz", pitch: "P8", widthPx: 40, heightPx: 20, refreshHz: 3840, environment: "Outdoor" },
+    { id: "mod-29", brand: "DIGILIGHT", name: "DIGILIGHT P1.53 RGB Indoor 32x16cm 208x104 6000Hz", pitch: "P1.53", widthPx: 208, heightPx: 104, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-30", brand: "DIGILIGHT", name: "DIGILIGHT P1.86 RGB Indoor 32x16cm 172x86 6000Hz", pitch: "P1.86", widthPx: 172, heightPx: 86, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-31", brand: "DIGILIGHT", name: "DIGILIGHT P2.0 RGB Indoor 32x16cm 160x80 6000Hz", pitch: "P2", widthPx: 160, heightPx: 80, refreshHz: 7680, environment: "Indoor" },
+    { id: "mod-32", brand: "DIGILIGHT", name: "DIGILIGHT P2.5 RGB Indoor 32x16cm 128x64 7680Hz", pitch: "P2.5", widthPx: 128, heightPx: 64, refreshHz: 7680, environment: "Indoor" },
+  ],
+
+  receivingCards: [
+    { id: "rc-1", brand: "Novastar", name: "Novastar Receiving Card DH7508-S", maxW: 512, maxH: 384 },
+    { id: "rc-2", brand: "Novastar", name: "Novastar Receiving Card DH7512-S", maxW: 512, maxH: 512 },
+    { id: "rc-3", brand: "Novastar", name: "Novastar Receiving Card DH7516-S", maxW: 512, maxH: 512 },
+    { id: "rc-4", brand: "Novastar", name: "Novastar Receiving Card MRV208-1", maxW: 256, maxH: 256 },
+    { id: "rc-5", brand: "Novastar", name: "Novastar Receiving Card MRV412", maxW: 512, maxH: 512 },
+    { id: "rc-6", brand: "Novastar", name: "Novastar Receiving Card MRV416", maxW: 512, maxH: 512 },
+    { id: "rc-7", brand: "Novastar", name: "Novastar Receiving Card A5s Plus", maxW: 512, maxH: 384 },
+    { id: "rc-8", brand: "Huidu", name: "Huidu Receiving Card HD-K08", maxW: 256, maxH: 512 },
+    { id: "rc-9", brand: "Huidu", name: "Huidu Receiving Card HD-K12", maxW: 384, maxH: 512 },
+    { id: "rc-10", brand: "Huidu", name: "Huidu Receiving Card HD-R708", maxW: 256, maxH: 512 },
+    { id: "rc-11", brand: "Huidu", name: "Huidu Receiving Card HD-R712", maxW: 256, maxH: 1024 },
+    { id: "rc-12", brand: "Huidu", name: "Huidu Receiving Card HD-R716", maxW: 320, maxH: 1024 },
+    { id: "rc-13", brand: "Huidu", name: "Huidu Receiving Card HD-R732 HUB320", maxW: 256, maxH: 1024 },
+    { id: "rc-14", brand: "Huidu", name: "Huidu Receiving Card HD-R500S HUB50Pin", maxW: 128, maxH: 512 },
+    { id: "rc-15", brand: "Huidu", name: "Huidu Receiving Card HD-R5S", maxW: 126, maxH: 768 },
+    { id: "rc-16", brand: "Kystar", name: "Kystar Receiving Card G608", maxW: 512, maxH: 256 },
+    { id: "rc-17", brand: "Kystar", name: "Kystar Receiving Card R12", maxW: 256, maxH: 1024 },
+    { id: "rc-18", brand: "Kystar", name: "Kystar Receiving Card G616", maxW: 128, maxH: 1024 },
+    { id: "rc-19", brand: "Kystar", name: "Kystar Receiving Card G628 HUB320", maxW: 256, maxH: 1024 },
+    { id: "rc-20", brand: "Kystar", name: "Kystar Receiving Card H8S", maxW: 320, maxH: 512 },
+  ],
+
+  controllers: [
+    { id: "ctrl-1", brand: "Novastar", name: "Novastar Video Processor VC2", ports: 2 },
+    { id: "ctrl-2", brand: "Novastar", name: "Novastar Video Processor VC4", ports: 4 },
+    { id: "ctrl-3", brand: "Novastar", name: "Novastar Video Processor VX400S-N", ports: 4 },
+    { id: "ctrl-4", brand: "Novastar", name: "Novastar Video Processor VX400", ports: 4 },
+    { id: "ctrl-5", brand: "Novastar", name: "Novastar Video Processor VX600", ports: 6 },
+    { id: "ctrl-6", brand: "Novastar", name: "Novastar Video Processor VX1000", ports: 10 },
+    { id: "ctrl-7", brand: "Novastar", name: "Novastar Video Processor VX16S", ports: 16 },
+    { id: "ctrl-8", brand: "Novastar", name: "Novastar Video Processor VX2000 Pro", ports: 20 },
+    { id: "ctrl-10", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB1-G", ports: 1 },
+    { id: "ctrl-11", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB2-G", ports: 2 },
+    { id: "ctrl-12", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB30", ports: 2 },
+    { id: "ctrl-13", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB40", ports: 2 },
+    { id: "ctrl-14", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB50", ports: 2 },
+    { id: "ctrl-15", brand: "Novastar", name: "Novastar Multimedia Player Taurus TB60", ports: 4 },
+    { id: "ctrl-16", brand: "Novastar", name: "Novastar Multimedia Player Taurus TU15 PRO", ports: 4 },
+    { id: "ctrl-17", brand: "Novastar", name: "Novastar Multimedia Player Taurus TU20 PRO", ports: 6 },
+    { id: "ctrl-18", brand: "Novastar", name: "Novastar Multimedia Player Taurus TU40 PRO", ports: 20 },
+    { id: "ctrl-40", brand: "Huidu", name: "Huidu Sending Box HD-A3L", ports: 1 },
+    { id: "ctrl-41", brand: "Huidu", name: "Huidu Sending Box HD-A4L", ports: 2 },
+    { id: "ctrl-42", brand: "Huidu", name: "Huidu Sending Box HD-A5L", ports: 4 },
+    { id: "ctrl-43", brand: "Huidu", name: "Huidu Sending Box HD-A6L", ports: 8 },
+    { id: "ctrl-44", brand: "Huidu", name: "Huidu Sending Box HD-A7 4K", ports: 10 },
+    { id: "ctrl-45", brand: "Huidu", name: "Huidu Sending Box HD-A8 4K", ports: 16 },
+    { id: "ctrl-46", brand: "Huidu", name: "Huidu Sending Box HD-H6 (Android)", ports: 8 },
+    { id: "ctrl-47", brand: "Huidu", name: "Huidu Sending Box HD-H8 (Android)", ports: 12 },
+    { id: "ctrl-50", brand: "Huidu", name: "Huidu Mini Videotron Contoller HD-D16", ports: 1 },
+    { id: "ctrl-51", brand: "Huidu", name: "Huidu Mini Videotron Contoller HD-D18", ports: 1 },
+    { id: "ctrl-52", brand: "Huidu", name: "Huidu All in 1 Sending and Receiving Card HD-C08L", ports: 1 },
+    { id: "ctrl-53", brand: "Huidu", name: "Huidu All in 1 Sending and Receiving Card HD-C16L", ports: 1 },
+    { id: "ctrl-54", brand: "Huidu", name: "Huidu All in 1 Sending and Receiving Card HD-C36C", ports: 1 },
+    { id: "ctrl-56", brand: "Huidu", name: "Huidu Video Processor HD-KV210", ports: 2 },
+    { id: "ctrl-57", brand: "Huidu", name: "Huidu Video Processor HD-KV410", ports: 4 },
+    { id: "ctrl-58", brand: "Huidu", name: "Huidu Video Processor HD-VP210C", ports: 2 },
+    { id: "ctrl-59", brand: "Huidu", name: "Huidu Video Processor HD-VP210H", ports: 2 },
+    { id: "ctrl-60", brand: "Huidu", name: "Huidu Video Processor HD-VP410C", ports: 4 },
+    { id: "ctrl-61", brand: "Huidu", name: "Huidu Video Processor HD-VP410H", ports: 4 },
+    { id: "ctrl-62", brand: "Huidu", name: "Huidu Video Processor HD-VP620", ports: 6 },
+    { id: "ctrl-63", brand: "Huidu", name: "Huidu Video Processor HD-VP630", ports: 6 },
+    { id: "ctrl-64", brand: "Huidu", name: "Huidu Video Processor HD-VP820", ports: 8 },
+    { id: "ctrl-65", brand: "Huidu", name: "Huidu Video Processor HD-VP830", ports: 8 },
+    { id: "ctrl-66", brand: "Huidu", name: "Huidu Video Processor HD-VP1220C", ports: 12 },
+    { id: "ctrl-67", brand: "Huidu", name: "Huidu Video Processor HD-VP1240A", ports: 12 },
+    { id: "ctrl-68", brand: "Huidu", name: "Huidu Video Processor HD-VP1620C", ports: 16 },
+    { id: "ctrl-69", brand: "Huidu", name: "Huidu Video Processor HD-VP1640A", ports: 16 },
+    { id: "ctrl-70", brand: "Huidu", name: "Huidu Video Processor HD-VP2060", ports: 20 },
+    { id: "ctrl-71", brand: "Huidu", name: "Huidu Video Processor HD-VP3060", ports: 30 },
+    { id: "ctrl-72", brand: "Huidu", name: "Huidu Video Processor HD-VP4060", ports: 40 },
+    { id: "ctrl-73", brand: "Kystar", name: "Kystar Sending Card ES2", ports: 2 },
+    { id: "ctrl-74", brand: "Kystar", name: "Kystar Sending Card ES2BOX", ports: 2 },
+    { id: "ctrl-75", brand: "Kystar", name: "Kystar Sending Card ES4", ports: 4 },
+    { id: "ctrl-76", brand: "Kystar", name: "Kystar Sending Card ES4-3D", ports: 4 },
+    { id: "ctrl-77", brand: "Kystar", name: "Kystar Sending Card ES16", ports: 16 },
+    { id: "ctrl-78", brand: "Kystar", name: "Kystar All in 1 Sending and Receiving Card KPB04", ports: 4 },
+    { id: "ctrl-79", brand: "Kystar", name: "Kystar All in 1 Sending and Receiving Card KPB08", ports: 8 },
+    { id: "ctrl-80", brand: "Kystar", name: "Kystar All in 1 Sending and Receiving Card KPB12", ports: 12 },
+    { id: "ctrl-81", brand: "Kystar", name: "Kystar Sending Box KP1", ports: 1 },
+    { id: "ctrl-82", brand: "Kystar", name: "Kystar Sending Box KP2", ports: 2 },
+    { id: "ctrl-83", brand: "Kystar", name: "Kystar Sending Box KP1PRO (4G)", ports: 1 },
+    { id: "ctrl-84", brand: "Kystar", name: "Kystar Sending Box KP2PRO (4G)", ports: 2 },
+    { id: "ctrl-85", brand: "Kystar", name: "Kystar Sending Box KP1H", ports: 1 },
+    { id: "ctrl-86", brand: "Kystar", name: "Kystar Sending Box KP2H", ports: 2 },
+    { id: "ctrl-87", brand: "Kystar", name: "Kystar Sending Box KP4H", ports: 4 },
+    { id: "ctrl-88", brand: "Kystar", name: "Kystar Sending Box KP2K", ports: 2 },
+    { id: "ctrl-89", brand: "Kystar", name: "Kystar Sending Box KP4K", ports: 4 },
+    { id: "ctrl-90", brand: "Kystar", name: "Kystar Video Processor KLS2C", ports: 2 },
+    { id: "ctrl-91", brand: "Kystar", name: "Kystar Video Processor KLS4C", ports: 4 },
+    { id: "ctrl-92", brand: "Kystar", name: "Kystar Video Processor KLS6", ports: 6 },
+    { id: "ctrl-93", brand: "Kystar", name: "Kystar Video Processor KLS8", ports: 8 },
+    { id: "ctrl-94", brand: "Kystar", name: "Kystar Video Processor KLS8Pro", ports: 10 },
+    { id: "ctrl-95", brand: "Kystar", name: "Kystar Video Processor KLS12", ports: 12 },
+    { id: "ctrl-96", brand: "Kystar", name: "Kystar Video Processor LS16", ports: 16 },
+    { id: "ctrl-97", brand: "Kystar", name: "Kystar Video Processor KLS24", ports: 24 },
+    { id: "ctrl-98", brand: "Kystar", name: "Kystar Intelligent Server LA400", ports: 4 },
+    { id: "ctrl-99", brand: "Kystar", name: "Kystar Intelligent Server LA800", ports: 8 },
+    { id: "ctrl-100", brand: "Kystar", name: "Kystar Intelligent Server LA1200", ports: 12 },
+  ],
+
+  powerSupplies: [
+    { id: "psu-1", name: "CZCL Chuanglian Slim Power Supply 5V 80A A-400AK-5", voltage: 5.0, amps: 80.0, watt: 400 },
+    { id: "psu-2", name: "CZCL Chuanglian Slim Power Supply 5V 60A A-300AB-5", voltage: 5.0, amps: 60.0, watt: 300 },
+    { id: "psu-3", name: "CZCL Chuanglian Slim Power Supply 5V 40A A-200AF-5", voltage: 5.0, amps: 40.0, watt: 200 },
+    { id: "psu-4", name: "Chenglian Slim Power Supply 4.5V 60A CL-AS5C-300W-4.5", voltage: 4.5, amps: 60.0, watt: 300 },
+    { id: "psu-5", name: "Chenglian Slim Power Supply 5V 40A CL-AS6B-200W-5A", voltage: 5.0, amps: 40.0, watt: 200 },
+    { id: "psu-6", name: "YXDY Slim Power Supply 5V 60A", voltage: 5.0, amps: 60.0, watt: 300 },
+  ],
+
+  boxPower: [
+    { id: "box-1", name: "Box Power Indoor 10kW (max 15sqm)", environment: "Indoor", kw: 10, maxSqm: 15 },
+    { id: "box-2", name: "Box Power Indoor 20kW (max 30sqm)", environment: "Indoor", kw: 20, maxSqm: 30 },
+    { id: "box-3", name: "Box Power Indoor 40kW (max 60sqm)", environment: "Indoor", kw: 40, maxSqm: 60 },
+    { id: "box-4", name: "Box Power Indoor 60kW (max 90sqm)", environment: "Indoor", kw: 60, maxSqm: 90 },
+    { id: "box-5", name: "Box Power Outdoor 10kW (max 8sqm)", environment: "Outdoor", kw: 10, maxSqm: 8 },
+    { id: "box-6", name: "Box Power Outdoor 20kW (max 16sqm)", environment: "Outdoor", kw: 20, maxSqm: 16 },
+    { id: "box-7", name: "Box Power Outdoor 40kW (max 32sqm)", environment: "Outdoor", kw: 40, maxSqm: 32 },
+    { id: "box-8", name: "Box Power Outdoor 60kW (max 48sqm)", environment: "Outdoor", kw: 60, maxSqm: 48 },
+  ],
+
+  cabinets: [
+    { id: "cab-1", name: "Cabinet Outdoor Die Casting Magnesium 96x96cm + 2 Fan" },
+    { id: "cab-2", name: "Cabinet Outdoor Die Casting Magnesium 64x64cm" },
+    { id: "cab-3", name: "Cabinet Outdoor Iron 96x96cm + 2 Fan (320x160 module)" },
+    { id: "cab-4", name: "Cabinet Outdoor Iron 64x64cm" },
+    { id: "cab-5", name: "Cabinet Outdoor Iron 64x48cm" },
+    { id: "cab-6", name: "Cabinet Outdoor Iron 64x96cm" },
+    { id: "cab-7", name: "Cabinet Outdoor Iron 32x64cm" },
+    { id: "cab-8", name: "Cabinet Outdoor Iron 32x48cm" },
+    { id: "cab-9", name: "Cabinet Outdoor Iron Corner 90° (Rotate 3x7 Module)" },
+    { id: "cab-10", name: "Cabinet Outdoor Iron Corner 90° 192x96cm" },
+    { id: "cab-11", name: "Cabinet Indoor Die Casting Aluminium 64x64cm" },
+    { id: "cab-12", name: "Cabinet Indoor Die Casting Aluminium 64x48cm" },
+    { id: "cab-13", name: "Cabinet Indoor Die Casting Aluminium 32x64cm" },
+    { id: "cab-14", name: "Cabinet Indoor Die Casting Aluminium 32x48cm" },
+    { id: "cab-15", name: "Cabinet Poster Portable Signage 64x192cm" },
+    { id: "cab-16", name: "Cabinet Poster Portable Signage 64x192cm 2 Sisi" },
+    { id: "cab-17", name: "Cabinet LED Cube 64x64cm 6 Sisi" },
+    { id: "cab-18", name: "Cabinet LED Taxi 96x32cm 2 Sisi" },
+    { id: "cab-19", name: "LED Standing Smart TV 256x144cm (4x3 64x48cm)" },
+  ],
+
+  /* Aksesoris wajib & pendukung instalasi — referensi checklist, bukan kalkulasi otomatis */
+  accessoryCategories: [
+    { category: "Kabel Power, Data, Karet LED Module", items: ["Kabel Power 2 Plug", "Kabel Power 3 Plug", "Kabel Power 4 Plug", "Kabel Data IDC 16pin 20cm", "Kabel Data IDC 16pin 40cm", "Kabel Data IDC 16pin 60cm", "Kabel Data IDC 16pin 80cm", "Kabel Data IDC 16pin 100cm", "Kabel Data IDC 16pin 120cm", "Kabel Data IDC 16pin 150cm", "Kabel Data IDC 16pin 200cm", "Kabel Data IDC 16pin Roll", "Socket Data IDC 16pin", "Kabel Data IDC 26pin Roll", "Socket Data IDC 26pin", "Karet Waterproof for Outdoor Module (32x16cm)", "Karet Waterproof for Outdoor Module (25x25cm)"] },
+    { category: "Baut Magnet dan Tanam", items: ["Baut Magnet Ceper Cabinet Front Maintenance", "Baut Magnet Panjang M4 13x17", "Baut Magnet Pendek M3 13x17", "Baut Tanam M4", "Baut Tanam M3"] },
+    { category: "Socket Power dan LAN", items: ["Soket Power Outdoor Female + Built in Kabel", "Soket Ethernet Outdoor Female + Built in Kabel", "Kabel Jumper Power Outdoor Rental", "Kabel Jumper Ethernet Outdoor Rental", "Soket Power Outdoor Female", "Soket Power Outdoor Male", "Soket LAN Outdoor Female", "Soket LAN Outdoor Male"] },
+    { category: "Kabel Power dan LAN", items: ["Kabel Power 3x2.5mm 1m", "Kabel Power 3x2.5mm 2m", "Kabel LAN CAT6 1m", "Kabel LAN CAT6 2m", "Kabel LAN CAT6 5m", "Kabel LAN CAT6 10m"] },
+    { category: "Mesin Vacuum + LED Remover", items: ["Mesin Vacuum Portable (Case + Adaptor)", "Mesin Vacuum (Model Colokan Kabel)", "LED Remover"] },
+    { category: "Tools Pendukung Instalasi", items: ["LAN Tester", "Crimping Tool for Data Cable", "Crimping Tool for LAN Cable"] },
+    { category: "Repair Pad", items: ["Repaid Pad SMD1515", "Repaid Pad SMD1921", "Repaid Pad SMD2121"] },
+  ]
+};
+
+/* ---------- Harga satuan default (SEMUA Rp 0 — wajib diisi tim sales) ----------
+   File sumber tidak memuat data harga. Nilai di bawah hanya placeholder
+   agar kalkulator bisa langsung dipakai; admin/sales WAJIB memperbarui
+   angka ini (atau mengisi langsung di form estimator pada halaman) */
+window.PRICE_DEFAULTS = {
+  modulePerPcs: 0,
+  receivingCardPerPcs: 0,
+  powerSupplyPerPcs: 0,
+  controllerPerUnit: 0,
+  structurePerSqm: 0,
+  installationPerSqm: 0,
+  accessoryRate: 0.05 // persentase dari subtotal hardware, bisa diubah di form
+};

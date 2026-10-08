@@ -1,0 +1,415 @@
+/* =========================================================
+   products-data.js — Katalog Produk Videotron
+   Struktur mengikuti Product Data Schema (PRD Section 7).
+   Nanti diganti response API/CMS tanpa mengubah products.js
+   ========================================================= */
+
+window.SEGMENTS = [
+  { key: "all",             label: "All Products",   icon: "▦" },
+  { key: "indoor-led",      label: "Indoor LED",     icon: "▤" },
+  { key: "outdoor-led",     label: "Outdoor LED",    icon: "☀" },
+  { key: "rental-led",      label: "Rental LED",     icon: "⚡" },
+  { key: "fine-pitch-led",  label: "Fine Pitch LED", icon: "◫" },
+  { key: "transparent-led", label: "Transparent LED",icon: "◇" },
+  { key: "flexible-led",    label: "Flexible LED",   icon: "∿" },
+  { key: "creative-led",    label: "Creative LED",   icon: "✦" },
+  { key: "sport-led",       label: "Sport LED",      icon: "◉" },
+  { key: "custom-led",      label: "Custom LED",     icon: "⚙" }
+];
+
+/* Deskripsi edukatif per segmen (PRD Section 5) */
+window.SEGMENT_INFO = {
+  "all":             { title: "Katalog Videotron & LED Display", desc: "Seluruh seri LED display kami untuk kebutuhan indoor, outdoor, rental, fine pitch hingga instalasi kustom." },
+  "indoor-led":      { title: "Indoor LED Display",      desc: "Kejernihan gambar jarak dekat, reproduksi warna akurat, dan kenyamanan mata untuk meeting room, auditorium, mall dan studio broadcast." },
+  "outdoor-led":     { title: "Outdoor LED Display",     desc: "Durabilitas terhadap cuaca ekstrem, visibilitas di bawah sinar matahari langsung, dan efisiensi daya untuk billboard DOOH & fasad gedung." },
+  "rental-led":      { title: "Rental LED Display",      desc: "Kemudahan mobilitas, kecepatan perakitan fast-lock, dan proteksi sudut cabinet untuk konser, pameran dan wedding event." },
+  "fine-pitch-led":  { title: "Fine Pitch LED Display",  desc: "Resolusi Ultra HD/4K tanpa garis penyambung (seamless bezel) untuk command center, boardroom dan TV studio." },
+  "transparent-led": { title: "Transparent LED Display", desc: "Menampilkan konten tanpa menghalangi cahaya alami gedung — ideal untuk glass window mall, showroom dan curtain wall." },
+  "flexible-led":    { title: "Flexible / Soft LED",     desc: "Modul silikon lunak yang dapat dibengkokkan membentuk pilar, wave ceiling dan curved wall." },
+  "creative-led":    { title: "Creative & Special Shape",desc: "Solusi kustom geometri non-standar: sphere, cube, tunnel hingga 3D naked-eye corner display." },
+  "sport-led":       { title: "Sport & Stadium LED",     desc: "Keamanan atlet, perlindungan benturan, dan standar siaran langsung TV bebas flicker hingga 7.680 Hz." },
+  "custom-led":      { title: "Custom & Engineered LED", desc: "Turnkey engineering: CAD design, structural engineering, fabrikasi cabinet kustom dan integrasi API control." }
+};
+
+/* ---- Katalog produk ---- */
+window.PRODUCT_CATALOG = [
+  {
+    product_id: "mod-1", product_name: "DAHUA P1.25 RGB Indoor 1/64S 32x16cm 256x128 6000Hz GOB HUB320",
+    image: "assets/img/products/mod-1.jpg",
+    slug: "dahua-p1-25-rgb-indoor-1-64s-32x16cm-256x128-6000hz-gob-hub320", tagline: "Indoor LED Module — P1.25",
+    category_segment: ["fine-pitch-led"], install_type: "fixed",
+    badges: ["GOB Protection", "HUB Connector Ready", "High Refresh Rate"],
+    specs: { pixel_pitch_mm: 1.25, environment: "Indoor", brightness_nits: 922, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "256 × 128", cabinet_weight_kg: 0.44,
+      avg_power_watts_sqm: 125, max_power_watts_sqm: 369, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.25 indoor dari DAHUA, resolusi 256×128 px per modul, refresh 6.000 Hz.", is_featured: false, status: "active", popularity: 95
+  },
+  {
+    product_id: "mod-2", product_name: "DAHUA P1.53 RGB Indoor 1/52S 32x16cm 208x104 6000Hz",
+    image: "assets/img/products/mod-36.png",
+    slug: "dahua-p1-53-rgb-indoor-1-52s-32x16cm-208x104-6000hz", tagline: "Indoor LED Module — P1.53",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 1.53, environment: "Indoor", brightness_nits: 1004, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "208 × 104", cabinet_weight_kg: 0.45,
+      avg_power_watts_sqm: 131, max_power_watts_sqm: 386, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.53 indoor dari DAHUA, resolusi 208×104 px per modul, refresh 6.000 Hz.", is_featured: false, status: "active", popularity: 94
+  },
+  {
+    product_id: "mod-3", product_name: "DAHUA P1.839 RGB Indoor 1/58S 32x16cm 174x87 6000Hz HUB320",
+    image: "assets/img/products/mod-38.png",
+    slug: "dahua-p1-839-rgb-indoor-1-58s-32x16cm-174x87-6000hz-hub320", tagline: "Indoor LED Module — P1.839",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["HUB Connector Ready", "High Refresh Rate"],
+    specs: { pixel_pitch_mm: 1.839, environment: "Indoor", brightness_nits: 1093, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "174 × 87", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.839 indoor dari DAHUA, resolusi 174×87 px per modul, refresh 6.000 Hz.", is_featured: false, status: "active", popularity: 93
+  },
+  {
+    product_id: "mod-4", product_name: "DAHUA P1.86 RGB Indoor 1/43S 32x16cm 172x86 6000Hz",
+    image: "assets/img/products/mod-40.png",
+    slug: "dahua-p1-86-rgb-indoor-1-43s-32x16cm-172x86-6000hz", tagline: "Indoor LED Module — P1.86",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 1.86, environment: "Indoor", brightness_nits: 1099, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "172 × 86", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.86 indoor dari DAHUA, resolusi 172×86 px per modul, refresh 6.000 Hz.", is_featured: true, status: "active", popularity: 92
+  },
+  {
+    product_id: "mod-5", product_name: "DAHUA P2.0 RGB Indoor 1/40S 32x16cm 160x80 6000Hz",
+    image: "assets/img/products/mod-42.png",
+    slug: "dahua-p2-0-rgb-indoor-1-40s-32x16cm-160x80-6000hz", tagline: "Indoor LED Module — P2",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 2, environment: "Indoor", brightness_nits: 1140, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "160 × 80", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 140, max_power_watts_sqm: 413, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2 indoor dari DAHUA, resolusi 160×80 px per modul, refresh 6.000 Hz.", is_featured: false, status: "active", popularity: 91
+  },
+  {
+    product_id: "mod-6", product_name: "DAHUA P2.5 RGB Indoor 1/32S 32x16cm 128x64 6000Hz",
+    image: "assets/img/products/mod-6.jpg",
+    slug: "dahua-p2-5-rgb-indoor-1-32s-32x16cm-128x64-6000hz", tagline: "Indoor LED Module — P2.5",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Indoor", brightness_nits: 1285, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "128 × 64", cabinet_weight_kg: 0.48,
+      avg_power_watts_sqm: 150, max_power_watts_sqm: 442, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 indoor dari DAHUA, resolusi 128×64 px per modul, refresh 6.000 Hz.", is_featured: true, status: "active", popularity: 90
+  },
+  {
+    product_id: "mod-7", product_name: "DAHUA P2.5 RGB Indoor 1/32S 32x16cm 128x64 3840Hz Copper",
+    image: "assets/img/products/mod-44.png",
+    slug: "dahua-p2-5-rgb-indoor-1-32s-32x16cm-128x64-3840hz-copper", tagline: "Indoor LED Module — P2.5",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["Copper Wire PCB"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Indoor", brightness_nits: 1285, refresh_rate_hz: 3840,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "128 × 64", cabinet_weight_kg: 0.48,
+      avg_power_watts_sqm: 150, max_power_watts_sqm: 442, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 indoor dari DAHUA, resolusi 128×64 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 89
+  },
+  {
+    product_id: "mod-8", product_name: "DAHUA P3.076 RGB Indoor 1/26S 32x16cm 104x52 6000Hz",
+    image: "assets/img/products/mod-46.png",
+    slug: "dahua-p3-076-rgb-indoor-1-26s-32x16cm-104x52-6000hz", tagline: "Indoor LED Module — P3.076",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 3.076, environment: "Indoor", brightness_nits: 1452, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "104 × 52", cabinet_weight_kg: 0.49,
+      avg_power_watts_sqm: 162, max_power_watts_sqm: 478, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P3.076 indoor dari DAHUA, resolusi 104×52 px per modul, refresh 6.000 Hz.", is_featured: false, status: "active", popularity: 88
+  },
+  {
+    product_id: "mod-9", product_name: "DAHUA P4 RGB Indoor 1/20S 32x16cm 80x40 6000Hz",
+    image: "assets/img/products/mod-52.png",
+    slug: "dahua-p4-rgb-indoor-1-20s-32x16cm-80x40-6000hz", tagline: "Indoor LED Module — P4",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 4, environment: "Indoor", brightness_nits: 1720, refresh_rate_hz: 6000,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "80 × 40", cabinet_weight_kg: 0.52,
+      avg_power_watts_sqm: 180, max_power_watts_sqm: 531, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P4 indoor dari DAHUA, resolusi 80×40 px per modul, refresh 6.000 Hz.", is_featured: true, status: "active", popularity: 87
+  },
+  {
+    product_id: "mod-10", product_name: "DAHUA P2.5 RGB Outdoor 1/16S 32x16cm 128x64 7680Hz",
+    image: "assets/img/products/mod-10.jpg",
+    slug: "dahua-p2-5-rgb-outdoor-1-16s-32x16cm-128x64-7680hz", tagline: "Outdoor LED Module — P2.5",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Outdoor", brightness_nits: 6275, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "128 × 64", cabinet_weight_kg: 0.78,
+      avg_power_watts_sqm: 225, max_power_watts_sqm: 664, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 outdoor dari DAHUA, resolusi 128×64 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 86
+  },
+  {
+    product_id: "mod-11", product_name: "DAHUA P3.076 RGB Outdoor 1/13S 32x16cm 104x52 7680Hz",
+    image: "assets/img/products/mod-48.png",
+    slug: "dahua-p3-076-rgb-outdoor-1-13s-32x16cm-104x52-7680hz", tagline: "Outdoor LED Module — P3.076",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 3.076, environment: "Outdoor", brightness_nits: 6523, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "104 × 52", cabinet_weight_kg: 0.8,
+      avg_power_watts_sqm: 233, max_power_watts_sqm: 687, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P3.076 outdoor dari DAHUA, resolusi 104×52 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 85
+  },
+  {
+    product_id: "mod-12", product_name: "DAHUA P4 RGB Outdoor 1/10S 32x16cm 80x40 7680Hz",
+    image: "assets/img/products/mod-12.jpg",
+    slug: "dahua-p4-rgb-outdoor-1-10s-32x16cm-80x40-7680hz", tagline: "Outdoor LED Module — P4",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 4, environment: "Outdoor", brightness_nits: 6920, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "80 × 40", cabinet_weight_kg: 0.85,
+      avg_power_watts_sqm: 246, max_power_watts_sqm: 726, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P4 outdoor dari DAHUA, resolusi 80×40 px per modul, refresh 7.680 Hz.", is_featured: true, status: "active", popularity: 84
+  },
+  {
+    product_id: "mod-13", product_name: "DAHUA P5 RGB Outdoor 1/8S 32x16cm 64x32 7680Hz",
+    image: "assets/img/products/mod-13.jpg",
+    slug: "dahua-p5-rgb-outdoor-1-8s-32x16cm-64x32-7680hz", tagline: "Outdoor LED Module — P5",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 5, environment: "Outdoor", brightness_nits: 7350, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "64 × 32", cabinet_weight_kg: 0.9,
+      avg_power_watts_sqm: 260, max_power_watts_sqm: 767, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P5 outdoor dari DAHUA, resolusi 64×32 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 83
+  },
+  {
+    product_id: "mod-14", product_name: "DAHUA P6.67 RGB Outdoor 1/6S 32X16cm 48x24 7680Hz",
+    image: "assets/img/products/mod-14.jpg",
+    slug: "dahua-p6-67-rgb-outdoor-1-6s-32x16cm-48x24-7680hz", tagline: "Outdoor LED Module — P6.67",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 6.67, environment: "Outdoor", brightness_nits: 8068, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "48 × 24", cabinet_weight_kg: 0.98,
+      avg_power_watts_sqm: 283, max_power_watts_sqm: 835, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P6.67 outdoor dari DAHUA, resolusi 48×24 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 82
+  },
+  {
+    product_id: "mod-15", product_name: "DAHUA P8 RGB Outdoor 1/5S 32x16cm 40x20 7680Hz",
+    image: "assets/img/products/mod-15.jpg",
+    slug: "dahua-p8-rgb-outdoor-1-5s-32x16cm-40x20-7680hz", tagline: "Outdoor LED Module — P8",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 8, environment: "Outdoor", brightness_nits: 8640, refresh_rate_hz: 7680,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "40 × 20", cabinet_weight_kg: 1.05,
+      avg_power_watts_sqm: 302, max_power_watts_sqm: 891, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P8 outdoor dari DAHUA, resolusi 40×20 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 81
+  },
+  {
+    product_id: "mod-16", product_name: "JIACAI P10 RGB Outdoor 1/2S 32X16cm 32X16 3840Hz SMD3535",
+    slug: "jiacai-p10-rgb-outdoor-1-2s-32x16cm-32x16-3840hz-smd3535", tagline: "Outdoor LED Module — P10",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["SMD3535 Lamp", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 10, environment: "Outdoor", brightness_nits: 9500, refresh_rate_hz: 3840,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "32 × 16", cabinet_weight_kg: 1.15,
+      avg_power_watts_sqm: 330, max_power_watts_sqm: 974, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P10 outdoor dari JIACAI, resolusi 32×16 px per modul, refresh 3.840 Hz.", is_featured: true, status: "active", popularity: 80
+  },
+  {
+    product_id: "mod-17", product_name: "DAHUA Flexible P1.53 RGB Indoor 1/52S 32x16cm 208x104 3840Hz",
+    image: "assets/img/products/mod-17.jpg",
+    slug: "dahua-flexible-p1-53-rgb-indoor-1-52s-32x16cm-208x104-3840hz", tagline: "Flexible Indoor LED Module — P1.53",
+    category_segment: ["flexible-led"], install_type: "creative",
+    badges: ["Bendable Module", "Magnetic Front Service"],
+    specs: { pixel_pitch_mm: 1.53, environment: "Indoor", brightness_nits: 1004, refresh_rate_hz: 3840,
+      ip_rating: "IP31", maintenance_access: "Front (Magnetic)", cabinet_material: "Silicone / Rubber",
+      cabinet_size_mm: "320 × 160 × 14", cabinet_px: "208 × 104", cabinet_weight_kg: 0.33,
+      avg_power_watts_sqm: 131, max_power_watts_sqm: 386, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.53 flexible indoor dari DAHUA, resolusi 208×104 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 79
+  },
+  {
+    product_id: "mod-18", product_name: "DAHUA Flexible P1.86 RGB Indoor 1/43S 32x16cm 172x86 3840Hz",
+    image: "assets/img/products/mod-18.jpg",
+    slug: "dahua-flexible-p1-86-rgb-indoor-1-43s-32x16cm-172x86-3840hz", tagline: "Flexible Indoor LED Module — P1.86",
+    category_segment: ["flexible-led"], install_type: "creative",
+    badges: ["Bendable Module", "Magnetic Front Service"],
+    specs: { pixel_pitch_mm: 1.86, environment: "Indoor", brightness_nits: 1099, refresh_rate_hz: 3840,
+      ip_rating: "IP31", maintenance_access: "Front (Magnetic)", cabinet_material: "Silicone / Rubber",
+      cabinet_size_mm: "320 × 160 × 14", cabinet_px: "172 × 86", cabinet_weight_kg: 0.34,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.86 flexible indoor dari DAHUA, resolusi 172×86 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 78
+  },
+  {
+    product_id: "mod-19", product_name: "DAHUA Flexible P2.5 RGB Indoor 1/32S 32x16cm 128x64 3840Hz",
+    image: "assets/img/products/mod-19.jpg",
+    slug: "dahua-flexible-p2-5-rgb-indoor-1-32s-32x16cm-128x64-3840hz", tagline: "Flexible Indoor LED Module — P2.5",
+    category_segment: ["flexible-led"], install_type: "creative",
+    badges: ["Bendable Module", "Magnetic Front Service"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Indoor", brightness_nits: 1285, refresh_rate_hz: 3840,
+      ip_rating: "IP31", maintenance_access: "Front (Magnetic)", cabinet_material: "Silicone / Rubber",
+      cabinet_size_mm: "320 × 160 × 14", cabinet_px: "128 × 64", cabinet_weight_kg: 0.35,
+      avg_power_watts_sqm: 150, max_power_watts_sqm: 442, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 flexible indoor dari DAHUA, resolusi 128×64 px per modul, refresh 3.840 Hz.", is_featured: true, status: "active", popularity: 77
+  },
+  {
+    product_id: "mod-20", product_name: "DAHUA Flexible P4 RGB Indoor 1/20S 32x16cm 80x40 3840Hz",
+    image: "assets/img/products/mod-20.jpg",
+    slug: "dahua-flexible-p4-rgb-indoor-1-20s-32x16cm-80x40-3840hz", tagline: "Flexible Indoor LED Module — P4",
+    category_segment: ["flexible-led"], install_type: "creative",
+    badges: ["Bendable Module", "Magnetic Front Service"],
+    specs: { pixel_pitch_mm: 4, environment: "Indoor", brightness_nits: 1720, refresh_rate_hz: 3840,
+      ip_rating: "IP31", maintenance_access: "Front (Magnetic)", cabinet_material: "Silicone / Rubber",
+      cabinet_size_mm: "320 × 160 × 14", cabinet_px: "80 × 40", cabinet_weight_kg: 0.38,
+      avg_power_watts_sqm: 180, max_power_watts_sqm: 531, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P4 flexible indoor dari DAHUA, resolusi 80×40 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 76
+  },
+  {
+    product_id: "mod-21", product_name: "DAHUA Flexible P4 RGB Outdoor 1/10S 32x16cm 80x40 3840Hz",
+    image: "assets/img/products/mod-20.jpg",
+    slug: "dahua-flexible-p4-rgb-outdoor-1-10s-32x16cm-80x40-3840hz", tagline: "Flexible Outdoor LED Module — P4",
+    category_segment: ["flexible-led"], install_type: "creative",
+    badges: ["Bendable Module", "Magnetic Front Service", "Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 4, environment: "Outdoor", brightness_nits: 6920, refresh_rate_hz: 3840,
+      ip_rating: "IP43 / IP31", maintenance_access: "Front (Magnetic)", cabinet_material: "Silicone / Rubber",
+      cabinet_size_mm: "320 × 160 × 14", cabinet_px: "80 × 40", cabinet_weight_kg: 0.38,
+      avg_power_watts_sqm: 246, max_power_watts_sqm: 726, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P4 flexible outdoor dari DAHUA, resolusi 80×40 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 75
+  },
+  {
+    product_id: "mod-22", product_name: "LAMPRO P1.839 RGB Indoor 1/58S 32x16cm 174x87 3840Hz HUB320",
+    image: "assets/img/products/mod-22.jpg",
+    slug: "lampro-p1-839-rgb-indoor-1-58s-32x16cm-174x87-3840hz-hub320", tagline: "Indoor LED Module — P1.839",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["HUB Connector Ready"],
+    specs: { pixel_pitch_mm: 1.839, environment: "Indoor", brightness_nits: 1093, refresh_rate_hz: 3840,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "174 × 87", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.839 indoor dari LAMPRO, resolusi 174×87 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 74
+  },
+  {
+    product_id: "mod-23", product_name: "LAMPRO P1.86 RGB Indoor 1/43S 32x16cm 172x86 7680Hz",
+    image: "assets/img/products/mod-26.png",
+    slug: "lampro-p1-86-rgb-indoor-1-43s-32x16cm-172x86-7680hz", tagline: "Indoor LED Module — P1.86",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 1.86, environment: "Indoor", brightness_nits: 1099, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "172 × 86", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.86 indoor dari LAMPRO, resolusi 172×86 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 73
+  },
+  {
+    product_id: "mod-24", product_name: "LAMPRO P2.5 RGB Indoor 1/32S 32x16cm 128x64 7680Hz",
+    image: "assets/img/products/mod-24.jpg",
+    slug: "lampro-p2-5-rgb-indoor-1-32s-32x16cm-128x64-7680hz", tagline: "Indoor LED Module — P2.5",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Indoor", brightness_nits: 1285, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "128 × 64", cabinet_weight_kg: 0.48,
+      avg_power_watts_sqm: 150, max_power_watts_sqm: 442, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 indoor dari LAMPRO, resolusi 128×64 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 72
+  },
+  {
+    product_id: "mod-25", product_name: "LAMPRO P4 RGB Indoor 1/20S 32x16cm 80x40 7680Hz",
+    image: "assets/img/products/mod-28.png",
+    slug: "lampro-p4-rgb-indoor-1-20s-32x16cm-80x40-7680hz", tagline: "Indoor LED Module — P4",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate"],
+    specs: { pixel_pitch_mm: 4, environment: "Indoor", brightness_nits: 1720, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "80 × 40", cabinet_weight_kg: 0.52,
+      avg_power_watts_sqm: 180, max_power_watts_sqm: 531, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P4 indoor dari LAMPRO, resolusi 80×40 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 71
+  },
+  {
+    product_id: "mod-26", product_name: "LAMPRO P4 RGB Outdoor 1/10S 32x16cm 80x40 3840Hz",
+    image: "assets/img/products/mod-30.png",
+    slug: "lampro-p4-rgb-outdoor-1-10s-32x16cm-80x40-3840hz", tagline: "Outdoor LED Module — P4",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 4, environment: "Outdoor", brightness_nits: 6920, refresh_rate_hz: 3840,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "80 × 40", cabinet_weight_kg: 0.85,
+      avg_power_watts_sqm: 246, max_power_watts_sqm: 726, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P4 outdoor dari LAMPRO, resolusi 80×40 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 70
+  },
+  {
+    product_id: "mod-27", product_name: "LAMPRO P5 RGB Outdoor 1/8S 32x16cm 64x32 3840Hz",
+    image: "assets/img/products/mod-32.png",
+    slug: "lampro-p5-rgb-outdoor-1-8s-32x16cm-64x32-3840hz", tagline: "Outdoor LED Module — P5",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 5, environment: "Outdoor", brightness_nits: 7350, refresh_rate_hz: 3840,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "64 × 32", cabinet_weight_kg: 0.9,
+      avg_power_watts_sqm: 260, max_power_watts_sqm: 767, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P5 outdoor dari LAMPRO, resolusi 64×32 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 69
+  },
+  {
+    product_id: "mod-28", product_name: "LAMPRO P8 RGB Outdoor 1/5S 32x16cm 40x20 3840Hz",
+    image: "assets/img/products/mod-34.png",
+    slug: "lampro-p8-rgb-outdoor-1-5s-32x16cm-40x20-3840hz", tagline: "Outdoor LED Module — P8",
+    category_segment: ["outdoor-led"], install_type: "fixed",
+    badges: ["Weatherproof Outdoor"],
+    specs: { pixel_pitch_mm: 8, environment: "Outdoor", brightness_nits: 8640, refresh_rate_hz: 3840,
+      ip_rating: "IP65 / IP54", maintenance_access: "Front & Rear", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 95", cabinet_px: "40 × 20", cabinet_weight_kg: 1.05,
+      avg_power_watts_sqm: 302, max_power_watts_sqm: 891, viewing_angle: "140° / 140°", lifespan_hours: 100000 },
+    highlight: "Modul P8 outdoor dari LAMPRO, resolusi 40×20 px per modul, refresh 3.840 Hz.", is_featured: false, status: "active", popularity: 68
+  },
+  {
+    product_id: "mod-29", product_name: "DIGILIGHT P1.53 RGB Indoor 32x16cm 208x104 6000Hz",
+    slug: "digilight-p1-53-rgb-indoor-32x16cm-208x104-6000hz", tagline: "Indoor LED Module — P1.53",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Budget Series"],
+    specs: { pixel_pitch_mm: 1.53, environment: "Indoor", brightness_nits: 1004, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "208 × 104", cabinet_weight_kg: 0.45,
+      avg_power_watts_sqm: 131, max_power_watts_sqm: 386, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.53 indoor dari DIGILIGHT, resolusi 208×104 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 67
+  },
+  {
+    product_id: "mod-30", product_name: "DIGILIGHT P1.86 RGB Indoor 32x16cm 172x86 6000Hz",
+    slug: "digilight-p1-86-rgb-indoor-32x16cm-172x86-6000hz", tagline: "Indoor LED Module — P1.86",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Budget Series"],
+    specs: { pixel_pitch_mm: 1.86, environment: "Indoor", brightness_nits: 1099, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 38", cabinet_px: "172 × 86", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 137, max_power_watts_sqm: 404, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P1.86 indoor dari DIGILIGHT, resolusi 172×86 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 66
+  },
+  {
+    product_id: "mod-31", product_name: "DIGILIGHT P2.0 RGB Indoor 32x16cm 160x80 6000Hz",
+    slug: "digilight-p2-0-rgb-indoor-32x16cm-160x80-6000hz", tagline: "Indoor LED Module — P2",
+    category_segment: ["indoor-led", "fine-pitch-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Budget Series"],
+    specs: { pixel_pitch_mm: 2, environment: "Indoor", brightness_nits: 1140, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "160 × 80", cabinet_weight_kg: 0.46,
+      avg_power_watts_sqm: 140, max_power_watts_sqm: 413, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2 indoor dari DIGILIGHT, resolusi 160×80 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 65
+  },
+  {
+    product_id: "mod-32", product_name: "DIGILIGHT P2.5 RGB Indoor 32x16cm 128x64 7680Hz",
+    slug: "digilight-p2-5-rgb-indoor-32x16cm-128x64-7680hz", tagline: "Indoor LED Module — P2.5",
+    category_segment: ["indoor-led"], install_type: "fixed",
+    badges: ["High Refresh Rate", "Budget Series"],
+    specs: { pixel_pitch_mm: 2.5, environment: "Indoor", brightness_nits: 1285, refresh_rate_hz: 7680,
+      ip_rating: "IP30", maintenance_access: "Front", cabinet_material: "Die-Cast Aluminum",
+      cabinet_size_mm: "320 × 160 × 55", cabinet_px: "128 × 64", cabinet_weight_kg: 0.48,
+      avg_power_watts_sqm: 150, max_power_watts_sqm: 442, viewing_angle: "160° / 160°", lifespan_hours: 100000 },
+    highlight: "Modul P2.5 indoor dari DIGILIGHT, resolusi 128×64 px per modul, refresh 7.680 Hz.", is_featured: false, status: "active", popularity: 64
+  },
+];

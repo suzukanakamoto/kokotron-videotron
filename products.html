@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog Videotron &amp; LED Display | Indoor, Outdoor, Rental, Fine Pitch — LumeniX</title>
+<meta name="description" content="Katalog lengkap Videotron / LED Display: Indoor, Outdoor, Rental, Fine Pitch, Transparent, Flexible, Creative, Sport dan Custom LED. Filter berdasarkan pixel pitch, brightness dan sertifikasi TKDN.">
+<link rel="canonical" href="https://example.com/products.html">
+<meta property="og:title" content="Katalog Videotron &amp; LED Display — LumeniX">
+<meta property="og:description" content="9 segmen produk LED display dengan spesifikasi teknis lengkap dan perbandingan spesifikasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/products.css">
+</head>
+<body>
+<a class="skip" href="#catalog">Lewati ke katalog</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="logo" aria-label="Kokotron Home"><span class="logo__mark" aria-hidden="true"></span>Kokotron<em>Videotron</em></a>
+    <nav class="nav" id="nav" aria-label="Menu utama">
+      <ul class="nav__list">
+        <li><a href="products.html" class="is-active">Products</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- <a href="contact.html#quote" class="btn btn--accent nav__cta">Get a Quote</a> -->
+    </nav>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- Page head + segment chips -->
+<section class="phead">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>›</span> <span id="crumbSeg">Products</span></nav>
+    <h1 id="pageTitle">Katalog Videotron &amp; LED Display</h1>
+    <p class="phead__desc" id="pageDesc">Seluruh seri LED display kami untuk kebutuhan indoor, outdoor, rental, fine pitch hingga instalasi kustom.</p>
+    <div class="chips" id="segChips" role="tablist" aria-label="Segmen produk"></div>
+  </div>
+</section>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <div class="wrap toolbar__in">
+    <div class="search">
+      <input type="search" id="searchInput" placeholder="Cari model atau pitch — mis. P2.5, Titan" aria-label="Cari produk">
+    </div>
+    <label class="sel"><span class="sr">Urutkan</span>
+      <select id="sortSelect">
+        <option value="popular">Most Popular</option>
+        <option value="pitch-asc">Pixel Pitch: Terkecil → Terbesar</option>
+        <option value="bright-desc">Brightness: Tertinggi → Terendah</option>
+        <option value="newest">Newest Release</option>
+      </select>
+    </label>
+    <button class="btn-filter" id="openFilter" aria-expanded="false">Filter</button>
+    <div class="viewtoggle" role="group" aria-label="Mode tampilan">
+      <button id="viewGrid" aria-pressed="true">Grid</button>
+      <button id="viewTable" aria-pressed="false">Table</button>
+    </div>
+  </div>
+</div>
+
+<section class="sec catalog" id="catalog">
+  <div class="wrap catalog__in">
+
+    <!-- Sidebar filter -->
+    <aside class="fpanel" id="fpanel" aria-label="Filter produk">
+      <div class="fpanel__head">
+        <h2>Filter</h2>
+        <button class="fpanel__close" id="closeFilter" aria-label="Tutup filter">×</button>
+      </div>
+
+      <fieldset class="fgroup"><legend>Pixel Pitch Range</legend>
+        <label><input type="checkbox" name="pitch" value="ultra"> Ultra Fine (&lt; P1.5)</label>
+        <label><input type="checkbox" name="pitch" value="fine"> Fine Pitch (P1.5 – P2.0)</label>
+        <label><input type="checkbox" name="pitch" value="standard"> Standard Indoor (P2.1 – P3.0)</label>
+        <label><input type="checkbox" name="pitch" value="medium"> Outdoor / Medium (P3.1 – P5.0)</label>
+        <label><input type="checkbox" name="pitch" value="long"> Long Distance (&gt; P5.0)</label>
+      </fieldset>
+
+      <fieldset class="fgroup"><legend>Environment</legend>
+        <label><input type="checkbox" name="env" value="Indoor"> Indoor</label>
+        <label><input type="checkbox" name="env" value="Outdoor"> Outdoor</label>
+        <label><input type="checkbox" name="env" value="Semi-Outdoor"> Semi-Outdoor</label>
+      </fieldset>
+
+      <fieldset class="fgroup"><legend>Installation Type</legend>
+        <label><input type="checkbox" name="inst" value="fixed"> Fixed Installation</label>
+        <label><input type="checkbox" name="inst" value="rental"> Rental / Hanging</label>
+        <label><input type="checkbox" name="inst" value="perimeter"> Perimeter / Stadium</label>
+        <label><input type="checkbox" name="inst" value="creative"> Creative / Curved</label>
+        <label><input type="checkbox" name="inst" value="glass"> Glass Mounting</label>
+      </fieldset>
+
+      <fieldset class="fgroup"><legend>Brightness Rating</legend>
+        <label><input type="checkbox" name="bright" value="std"> Standard (&lt; 1.000 Nits)</label>
+        <label><input type="checkbox" name="bright" value="high"> High (1.000 – 3.500 Nits)</label>
+        <label><input type="checkbox" name="bright" value="ultra"> Ultra (&gt; 5.000 Nits)</label>
+      </fieldset>
+
+      <fieldset class="fgroup"><legend>Feature Badges</legend>
+        <label><input type="checkbox" name="badge" value="TKDN"> Sertifikasi TKDN</label>
+        <label><input type="checkbox" name="badge" value="Front"> Front Maintenance</label>
+        <label><input type="checkbox" name="badge" value="Refresh"> High Refresh (≥ 3.840 Hz)</label>
+        <label><input type="checkbox" name="badge" value="Energy"> Energy Saving</label>
+        <label><input type="checkbox" name="badge" value="IP68"> IP68 Waterproof</label>
+      </fieldset>
+
+      <div class="fpanel__foot">
+        <button class="btn btn--line" id="resetFilter" type="button">Reset Semua Filter</button>
+        <button class="btn btn--accent fpanel__apply" id="applyFilter" type="button">Terapkan Filter</button>
+      </div>
+    </aside>
+    <div class="fbackdrop" id="fbackdrop" hidden></div>
+
+    <!-- Results -->
+    <div class="results">
+      <p class="results__count" id="resultCount" role="status">Menampilkan 0 produk</p>
+      <div class="pgrid" id="pgrid"></div>
+
+      <div class="tablewrap" id="ptableWrap" hidden>
+        <table class="spectable">
+          <thead><tr>
+            <th scope="col">Model</th><th scope="col">Segmen</th><th scope="col">Pitch</th>
+            <th scope="col">Brightness</th><th scope="col">Refresh</th><th scope="col">Cabinet Size</th>
+            <th scope="col">Weight</th><th scope="col">IP Rating</th><th scope="col">Action</th>
+          </tr></thead>
+          <tbody id="ptableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="empty" id="emptyState" hidden>
+        <h3>Tidak ada produk yang sesuai dengan kombinasi filter Anda.</h3>
+        <p>Coba kurangi parameter filter atau gunakan pencarian umum. Tim engineer kami juga siap membuatkan spesifikasi LED kustom sesuai kebutuhan unik proyek Anda.</p>
+        <p class="empty__btns">
+          <button class="btn btn--line" id="resetFilter2" type="button">Reset Semua Filter</button>
+          <a class="btn btn--accent" href="contact.html#quote">Hubungi Tim Engineer</a>
+        </p>
+      </div>
+
+      <p class="sec__more" id="moreWrap" hidden><button class="btn btn--line" id="loadMore" type="button">Muat Produk Lainnya</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- Database Referensi Modul & Hardware (dari data Excel internal) -->
+<section class="sec hwref" id="hwref">
+  <div class="wrap">
+    <div class="hwref__head">
+      <h2>Database Referensi Modul &amp; Hardware</h2>
+      <p class="hwref__lead">Referensi teknis modul LED, receiving card, controller/sending box, power supply, box power dan cabinet yang kami dukung — dipakai tim engineering untuk menyusun Bill of Materials setiap proyek. Untuk estimasi harga dinamis berdasarkan jumlah cabinet, gunakan Simulator pada halaman Detail Produk.</p>
+    </div>
+    <div class="hwref__tabs" id="hwrefTabs" role="tablist" aria-label="Kategori hardware"></div>
+    <div class="hwref__toolbar">
+      <input type="search" id="hwrefSearch" placeholder="Cari brand, pitch, atau nama model..." aria-label="Cari hardware">
+      <p class="hwref__count" id="hwrefCount" role="status"></p>
+    </div>
+    <div class="hwref__tablewrap" id="hwrefTableWrap"></div>
+    <p class="hwref__note">* Database ini bersifat referensi spesifikasi teknis dan TIDAK memuat harga satuan resmi. Hubungi tim sales kami untuk penawaran harga terbaru.</p>
+  </div>
+</section>
+</main>
+
+<!-- Comparison dock -->
+<div class="dock" id="dock" hidden>
+  <div class="wrap dock__in">
+    <div class="dock__slots" id="dockSlots"></div>
+    <div class="dock__act">
+      <button class="btn btn--line dock__clear" id="dockClear" type="button">Kosongkan</button>
+      <button class="btn btn--accent" id="dockCompare" type="button">Bandingkan Spesifikasi</button>
+    </div>
+  </div>
+</div>
+
+<!-- Comparison modal -->
+<div class="modal" id="cmpModal" hidden role="dialog" aria-modal="true" aria-labelledby="cmpTitle">
+  <div class="modal__box">
+    <div class="modal__head">
+      <h2 id="cmpTitle">Matriks Perbandingan Spesifikasi</h2>
+      <button class="modal__close" id="cmpClose" aria-label="Tutup">×</button>
+    </div>
+    <div class="modal__body tablewrap" id="cmpBody"></div>
+  </div>
+</div>
+
+<footer class="ftr">
+  <div class="wrap ftr__bottom">
+    <p>© 2026 Kokotron Videotron. All Rights Reserved.</p>
+    <p><a href="index.html">Home</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/628110000000?text=Halo%2C%20saya%20ingin%20konsultasi%20LED%20Display." target="_blank" rel="noopener" data-ev="whatsapp_click" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1a11 11 0 0 1-4.3-3.1c-.9-1.1-1.5-2.3-1.5-2.8s.4-1.3.8-1.6c.2-.2.4-.2.6-.2h.4c.2 0 .4 0 .6.5l.7 1.7c.1.2.1.4 0 .6l-.3.5-.3.3c-.1.1-.2.3 0 .5a8 8 0 0 0 3.5 2.6c.3.1.4.1.6-.1l.7-.9c.2-.2.3-.2.6-.1l1.6.8c.3.1.5.2.5.4s0 .6-.1.9Z"/></svg>
+</a>
+
+<script src="assets/js/products-data.js"></script>
+<script src="assets/js/bom-reference-data.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/hwref.js"></script>
+</body>
+</html>
